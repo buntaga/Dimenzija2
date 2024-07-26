@@ -1,0 +1,54 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	img: string;
+}
+
+const { title, body, img } = Astro.props;
+---
+
+<a>
+    <div class="container">
+        <div class="card-img">
+            <img src={img} alt="Snow" >
+        </div>
+        <div class="bottom-right">
+            <h3>{title}</h3>
+            <p>{body.slice(0,250)}...</p>
+        </div>
+    </div>
+</a>
+	
+<style>
+	
+	.container {
+        background: cyan;
+        border-top: 1px dotted #ccc;
+        display: grid;
+  		grid-template-columns: repeat(2, 1fr);
+        width: 900px;
+        height: 250px;
+        overflow: hidden;
+        text-align: left;
+        
+	}
+	.card-img {
+        float: left;
+        line-height: 0;
+        margin-right: 20px;
+        position: relative;
+        width: 290px;
+        overflow: hidden;
+    }
+	.bottom-right {
+		color: black;
+        width: 600px;
+        padding-top: 2rem;
+	}
+	.bottom-right > p {
+		max-width: 600px;
+		overflow: hidden;
+        padding-top: 1rem;
+	}
+</style>

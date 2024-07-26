@@ -1,0 +1,82 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/NewsCard.astro';
+---
+
+<Layout title="Deveta Dimenzija">
+	<main>
+		<div class="grid-container">
+			<div class="naslovi-container">
+				<p>Naslovi</p>
+			</div>
+			<div class="top-container">
+				<Card title="15. Салон стрипа Лакташи" img="/400x900.png" body="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."/>
+			</div>
+		</div>
+		<div class="grid-container-2">
+			<div class="news-element-odd">
+				<p>Here</p>
+			</div>
+			<div class="news-element-even">
+				<p>Here</p>
+			</div>
+			<div class="news-element-odd">
+				<p>Here</p>
+			</div>
+			<div class="news-element-even">
+				<p>Here</p>
+			</div>
+			<div class="news-element-odd">
+				<p>Here</p>
+			</div>
+			<div class="news-element-even">
+				<p>Here</p>
+			</div>
+			<div class="news-element-odd">
+				<p>Here</p>
+			</div>
+		</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin-top: 2%;
+		padding: 1rem;
+		max-width: calc(100% - 2rem);
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.grid-container {
+		display: grid;
+  		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+		background-color: #2196F3;
+		padding: 10px;
+	}
+	.grid-container-2 {
+		display: grid;
+  		grid-template-columns: repeat(2, 1fr);
+		gap: 10px;
+		background-color: #dc25f8;
+		padding: 10px;
+	}
+	.top-container {
+		grid-column-start: 2;
+		grid-column-end: 4;
+		justify-self: center;
+	}
+	.naslovi-container {
+		justify-self: center;
+	}
+	.news-element-odd {
+		justify-self: right;
+		background-color: yellow;
+	}
+	.news-element-even {
+		justify-self: center;
+		background-color: yellow;
+	}
+</style>

@@ -1,0 +1,48 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	img: string;
+}
+
+const { title, body, img } = Astro.props;
+---
+
+
+<div class="container">
+	<a href="">
+		<img src={img} alt="Snow" >
+		<div class="bottom-right">
+			<h3>{title}</h3>
+			<p>{body.slice(0,150)}...</p>
+		</div>
+	</a>
+</div>
+	
+<style>
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		position: relative;
+		text-align: right;
+		overflow: hidden;
+		border-radius: 7px;
+		width: 900px;
+	}
+	.container > a {
+		display: flex;
+		align-items: center;
+	}
+	
+	.bottom-right {
+		position: absolute;
+		bottom: 8px;
+		right: 16px;
+		color: black;
+	}
+	.bottom-right > p {
+		max-width: 550px;
+		overflow: hidden;
+	}
+</style>
